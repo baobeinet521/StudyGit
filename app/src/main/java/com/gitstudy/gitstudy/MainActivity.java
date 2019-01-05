@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity{
                 Toast.makeText(MainActivity.this,"点击按钮",Toast.LENGTH_LONG).show();
                 Intent intent = new Intent();
                 intent.setClass(MainActivity.this,WebViewActivity.class);
+				
+				
                 startActivity(intent);
             }
         });
