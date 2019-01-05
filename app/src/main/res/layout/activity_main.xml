@@ -42,4 +42,25 @@
         android:layout_height="50dp"
         android:background="#87e6aa"
         android:text="排序btn"/>
+    <Button
+        android:id="@+id/handler1_btn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:background="#87e6aa"
+        android:text="handler1_btn"/>
+    <Button
+        android:id="@+id/handler2_btn"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:background="#87e6aa"
+        android:text="handler2_btn"/>
+    <Button
+        android:id="@+id/patch"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:background="#87e6aa"
+        android:text="handler2_btn"/>\
 </LinearLayout>
