@@ -6,6 +6,8 @@ apply plugin: 'com.android.application'
 //制作补丁时将这个打开，auto-patch-plugin紧跟着com.android.application
 //apply plugin: 'auto-patch-plugin'
 //apply plugin: 'robust'
+//Android美团多渠道打包Walle 插件
+apply plugin: 'walle'
 android {
     compileSdkVersion 28
     defaultConfig {
@@ -51,7 +53,7 @@ android {
             // 显示Log
             buildConfigField "boolean", "LOG_DEBUG", "true"
             versionNameSuffix "-debug"
-            minifyEnabled true
+            minifyEnabled false
             zipAlignEnabled false
             shrinkResources false
 //            signingConfig signingConfigs.debug
@@ -59,7 +61,7 @@ android {
 
         release {
             // 不显示Log
-            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "LOG_DEBUG", "true"
             //混淆
             minifyEnabled true
             //Zipalign优化
@@ -99,6 +101,18 @@ android {
         }
     }
     buildToolsVersion '28.0.3'
+
+    walle {
+        // 指定渠道包的输出路径
+        apkOutputFolder = new File("${project.buildDir}/outputs/channels")
+        // 定制渠道包的APK的文件名称
+//        apkFileNameFormat = '${appName}-${packageName}-${channel}-${buildType}-v${versionName}-${versionCode}-${buildTime}.apk';
+        apkFileNameFormat = '${appName}-${channel}-${buildType}-v${versionName}-${versionCode}.apk'
+        // 渠道配置文件
+        channelFile = new File("${project.getProjectDir()}/channel")
+        // 渠道&额外信息配置文件，与channelFile互斥
+        configFile = new File("${project.getProjectDir()}/config.json")
+    }
 }
 
 dependencies {
@@ -118,4 +132,5 @@ dependencies {
     implementation 'com.facebook.fresco:webpsupport:1.9.0'
     implementation files('libs/baselibrary.jar')
     implementation 'com.meituan.robust:robust:0.4.82'
+    implementation 'com.meituan.android.walle:library:1.1.6'
 }

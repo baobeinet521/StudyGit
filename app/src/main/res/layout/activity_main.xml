@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,5 +62,14 @@
         android:layout_marginTop="10dp"
         android:layout_height="50dp"
         android:background="#87e6aa"
-        android:text="handler2_btn"/>\
+        android:text="patch_pull_btn"/>
+
+    <Button
+        android:id="@+id/downLoadApk"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:background="#87e6aa"
+        android:text="download_apk_btn"
+        android:visibility="visible"/>
 </LinearLayout>

@@ -7,6 +7,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
 
+import com.meituan.android.walle.WalleChannelReader;
+
 public class MyApplication extends Application{
     @Override
     protected void attachBaseContext(Context base) {
@@ -16,6 +18,14 @@ public class MyApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
+        initUMeng();
+    }
+
+    public void initUMeng(){
+        String appkey = "your appkey";
+        String channelId = WalleChannelReader.getChannel(this.getApplicationContext());
+        //初始化友盟配置信息 通过代码方式配置友盟的渠道信息
+//        MobclickAgent.UMAnalyticsConfig config = new MobclickAgent.UMAnalyticsConfig(this, appkey, channelId);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.ICE_CREAM_SANDWICH)

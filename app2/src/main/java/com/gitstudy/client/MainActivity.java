@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity{
         click_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< HEAD:app2/src/main/java/com/gitstudy/client/MainActivity.java
                 Toast.makeText(MainActivity.this,"远程计算",Toast.LENGTH_LONG).show();
                 try {
                    double result =  mService.doCalculate(3,4);
@@ -52,6 +53,13 @@ public class MainActivity extends AppCompatActivity{
                 } catch (RemoteException e) {
                     e.printStackTrace();
                 }
+=======
+                Toast.makeText(MainActivity.this,"点击按钮",Toast.LENGTH_LONG).show();
+                Intent intent = new Intent();
+                intent.setClass(MainActivity.this,WebViewActivity.class);
+				//你说呢
+                startActivity(intent);
+>>>>>>> d866210dd1e71562080d5a86ad265606e716556a:app/src/main/java/com/gitstudy/gitstudy/MainActivity.java
             }
         });
 

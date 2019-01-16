@@ -1,4 +1,4 @@
-package com.gitstudy.client;
+package com.gitstudy.viewutils;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,6 +6,7 @@ import android.os.Build;
 import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -46,4 +47,10 @@ public class TestView extends View{
     protected void dispatchDraw(Canvas canvas) {
         super.dispatchDraw(canvas);
     }
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent event) {
+        return super.dispatchTouchEvent(event);
+    }
+
 }

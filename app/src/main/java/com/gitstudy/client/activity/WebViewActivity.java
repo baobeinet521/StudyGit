@@ -1,8 +1,6 @@
-package com.gitstudy.client;
+package com.gitstudy.client.activity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Application;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.net.Uri;
@@ -23,6 +21,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.gitstudy.client.R;
 
 import java.util.HashMap;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.gitstudy.client;
+package com.gitstudy.client.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

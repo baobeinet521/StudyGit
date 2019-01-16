@@ -8210,7 +8210,7 @@ android.support.v7.view.menu.MenuItemWrapperICS$CollapsibleActionViewWrapper -> 
     void <init>(android.view.View) -> <init>
     void onActionViewExpanded() -> a
     void onActionViewCollapsed() -> b
-    android.view.View getWrappedView() -> c
+    android.view.View getWrappedView() -> getWrappedView
 android.support.v7.view.menu.MenuItemWrapperICS$OnActionExpandListenerWrapper -> android.support.v7.view.menu.k$c:
     android.support.v7.view.menu.MenuItemWrapperICS this$0 -> a
     void <init>(android.support.v7.view.menu.MenuItemWrapperICS,android.view.MenuItem$OnActionExpandListener) -> <init>
@@ -10034,7 +10034,7 @@ android.support.v7.widget.ScrollingTabContainerView$TabView -> android.support.v
     void onInitializeAccessibilityNodeInfo(android.view.accessibility.AccessibilityNodeInfo) -> onInitializeAccessibilityNodeInfo
     void onMeasure(int,int) -> onMeasure
     void update() -> a
-    android.support.v7.app.ActionBar$Tab getTab() -> b
+    android.support.v7.app.ActionBar$Tab getTab() -> getTab
 android.support.v7.widget.SearchView -> android.support.v7.widget.SearchView:
     android.support.v7.widget.SearchView$SearchAutoComplete mSearchSrcTextView -> a
     android.view.View mSearchEditFrame -> k
@@ -11061,101 +11061,119 @@ com.facebook.webpsupport.WebpBitmapFactoryImpl -> com.facebook.webpsupport.WebpB
     float getScaleFromOptions(android.graphics.BitmapFactory$Options) -> getScaleFromOptions
     void sendWebpErrorLog(java.lang.String) -> a
     void <clinit>() -> <clinit>
-com.gitstudy.client.MainActivity -> com.gitstudy.client.MainActivity:
-    java.lang.String TAG -> k
-    android.widget.Button click_btn -> n
-    android.widget.Button sort_btn -> o
-    android.widget.Button handler1Btn -> p
-    android.widget.Button handler2Btn -> q
-    android.widget.Button patch -> r
-    java.lang.Integer[] data -> s
-    java.util.List listDataOne -> t
-    android.os.Handler mHandler1 -> l
-    android.os.Handler mHandler2 -> m
+com.gitstudy.client.activity.MainActivity -> com.gitstudy.client.activity.MainActivity:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> k
+    java.lang.String TAG -> l
+    android.widget.Button click_btn -> o
+    android.widget.Button sort_btn -> p
+    android.widget.Button handler1Btn -> q
+    android.widget.Button handler2Btn -> r
+    android.widget.Button patch -> s
+    java.lang.Integer[] data -> t
+    java.util.List listDataOne -> u
+    android.os.Handler mHandler1 -> m
+    android.os.Handler mHandler2 -> n
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
-    boolean isGrantSDCardReadPermission() -> k
-    void requestPermission() -> l
+    void setBackGround() -> k
+    boolean isGrantSDCardReadPermission() -> l
+    void requestPermission() -> m
     void onRequestPermissionsResult(int,java.lang.String[],int[]) -> onRequestPermissionsResult
-    void handlePermissionResult() -> m
-    void runRobust() -> n
-    java.lang.Integer[] access$000(com.gitstudy.client.MainActivity) -> a
-    boolean access$100(com.gitstudy.client.MainActivity) -> b
-    void access$200(com.gitstudy.client.MainActivity) -> c
-    void access$300(com.gitstudy.client.MainActivity) -> d
+    void handlePermissionResult() -> n
+    void runRobust() -> o
+    java.lang.Integer[] access$000(com.gitstudy.client.activity.MainActivity) -> a
+    boolean access$100(com.gitstudy.client.activity.MainActivity) -> b
+    void access$200(com.gitstudy.client.activity.MainActivity) -> c
+    void access$300(com.gitstudy.client.activity.MainActivity) -> d
     void <clinit>() -> <clinit>
-com.gitstudy.client.MainActivity$1 -> com.gitstudy.client.MainActivity$1:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$1 -> com.gitstudy.client.activity.MainActivity$1:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void handleMessage(android.os.Message) -> handleMessage
-com.gitstudy.client.MainActivity$2 -> com.gitstudy.client.MainActivity$2:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$2 -> com.gitstudy.client.activity.MainActivity$2:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void handleMessage(android.os.Message) -> handleMessage
-com.gitstudy.client.MainActivity$3 -> com.gitstudy.client.MainActivity$3:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$3 -> com.gitstudy.client.activity.MainActivity$3:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.gitstudy.client.MainActivity$4 -> com.gitstudy.client.MainActivity$4:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$4 -> com.gitstudy.client.activity.MainActivity$4:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.gitstudy.client.MainActivity$5 -> com.gitstudy.client.MainActivity$5:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$5 -> com.gitstudy.client.activity.MainActivity$5:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.gitstudy.client.MainActivity$6 -> com.gitstudy.client.MainActivity$6:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$6 -> com.gitstudy.client.activity.MainActivity$6:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.gitstudy.client.MainActivity$7 -> com.gitstudy.client.MainActivity$7:
-    com.gitstudy.client.MainActivity this$0 -> a
-    void <init>(com.gitstudy.client.MainActivity) -> <init>
+com.gitstudy.client.activity.MainActivity$7 -> com.gitstudy.client.activity.MainActivity$7:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.MainActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.MainActivity) -> <init>
     void onClick(android.view.View) -> onClick
 com.gitstudy.client.MyApplication -> com.gitstudy.client.MyApplication:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
     void <init>() -> <init>
     void attachBaseContext(android.content.Context) -> attachBaseContext
     void onCreate() -> onCreate
-com.gitstudy.client.SplashActivity -> com.gitstudy.client.SplashActivity:
+com.gitstudy.client.activity.SplashActivity -> com.gitstudy.client.activity.SplashActivity:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> k
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
-com.gitstudy.client.WebViewActivity -> com.gitstudy.client.WebViewActivity:
-    android.webkit.WebView mWebView -> k
-    android.widget.Button mJavaToJsBtn -> l
+com.gitstudy.client.activity.WebViewActivity -> com.gitstudy.client.activity.WebViewActivity:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> k
+    android.webkit.WebView mWebView -> l
+    android.widget.Button mJavaToJsBtn -> m
     void <init>() -> <init>
     void onCreate(android.os.Bundle) -> onCreate
     void transAndroidTojs(java.lang.String) -> a
     void jsCallAndroidUrl() -> k
     void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
-com.gitstudy.client.WebViewActivity$1 -> com.gitstudy.client.WebViewActivity$1:
-    com.gitstudy.client.WebViewActivity this$0 -> a
-    void <init>(com.gitstudy.client.WebViewActivity) -> <init>
+com.gitstudy.client.activity.WebViewActivity$1 -> com.gitstudy.client.activity.WebViewActivity$1:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.WebViewActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.WebViewActivity) -> <init>
     boolean onJsAlert(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsAlert
     boolean onJsConfirm(android.webkit.WebView,java.lang.String,java.lang.String,android.webkit.JsResult) -> onJsConfirm
     boolean onJsPrompt(android.webkit.WebView,java.lang.String,java.lang.String,java.lang.String,android.webkit.JsPromptResult) -> onJsPrompt
-com.gitstudy.client.WebViewActivity$1$1 -> com.gitstudy.client.WebViewActivity$1$1:
-    android.webkit.JsResult val$result -> a
-    com.gitstudy.client.WebViewActivity$1 this$1 -> b
-    void <init>(com.gitstudy.client.WebViewActivity$1,android.webkit.JsResult) -> <init>
+com.gitstudy.client.activity.WebViewActivity$1$1 -> com.gitstudy.client.activity.WebViewActivity$1$1:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    android.webkit.JsResult val$result -> b
+    com.gitstudy.client.activity.WebViewActivity$1 this$1 -> c
+    void <init>(com.gitstudy.client.activity.WebViewActivity$1,android.webkit.JsResult) -> <init>
     void onClick(android.content.DialogInterface,int) -> onClick
-com.gitstudy.client.WebViewActivity$2 -> com.gitstudy.client.WebViewActivity$2:
-    com.gitstudy.client.WebViewActivity this$0 -> a
-    void <init>(com.gitstudy.client.WebViewActivity) -> <init>
+com.gitstudy.client.activity.WebViewActivity$2 -> com.gitstudy.client.activity.WebViewActivity$2:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.WebViewActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.WebViewActivity) -> <init>
     void onClick(android.view.View) -> onClick
-com.gitstudy.client.WebViewActivity$3 -> com.gitstudy.client.WebViewActivity$3:
-    com.gitstudy.client.WebViewActivity this$0 -> a
-    void <init>(com.gitstudy.client.WebViewActivity) -> <init>
+com.gitstudy.client.activity.WebViewActivity$3 -> com.gitstudy.client.activity.WebViewActivity$3:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.WebViewActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.WebViewActivity) -> <init>
     void onReceiveValue(java.lang.String) -> a
     void onReceiveValue(java.lang.Object) -> onReceiveValue
-com.gitstudy.client.WebViewActivity$4 -> com.gitstudy.client.WebViewActivity$4:
-    com.gitstudy.client.WebViewActivity this$0 -> a
-    void <init>(com.gitstudy.client.WebViewActivity) -> <init>
+com.gitstudy.client.activity.WebViewActivity$4 -> com.gitstudy.client.activity.WebViewActivity$4:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.WebViewActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.WebViewActivity) -> <init>
     boolean shouldOverrideUrlLoading(android.webkit.WebView,android.webkit.WebResourceRequest) -> shouldOverrideUrlLoading
-com.gitstudy.client.WebViewActivity$JSInterface -> com.gitstudy.client.WebViewActivity$a:
-    com.gitstudy.client.WebViewActivity this$0 -> a
-    void <init>(com.gitstudy.client.WebViewActivity) -> <init>
+com.gitstudy.client.activity.WebViewActivity$JSInterface -> com.gitstudy.client.activity.WebViewActivity$a:
+    com.meituan.robust.ChangeQuickRedirect changeQuickRedirect -> a
+    com.gitstudy.client.activity.WebViewActivity this$0 -> b
+    void <init>(com.gitstudy.client.activity.WebViewActivity) -> <init>
     void register(java.lang.String) -> register
-    void <init>(com.gitstudy.client.WebViewActivity,com.gitstudy.client.WebViewActivity$1) -> <init>
+    void <init>(com.gitstudy.client.activity.WebViewActivity,com.gitstudy.client.activity.WebViewActivity$1) -> <init>
 com.gitstudy.patch.PatchManipulateImp -> com.gitstudy.a.a:
     void <init>() -> <init>
     java.util.List fetchPatchList(android.content.Context) -> fetchPatchList

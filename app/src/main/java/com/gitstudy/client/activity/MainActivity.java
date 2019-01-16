@@ -1,12 +1,9 @@
-package com.gitstudy.client;
+package com.gitstudy.client.activity;
 
-import android.app.Activity;
-import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.PersistableBundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +12,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.gitstudy.client.R;
+import com.gitstudy.download.DownLoadManagerSingleton;
 import com.gitstudy.patch.PatchManipulateImp;
 import com.gitstudy.patch.PermissionUtils;
 import com.gitstudy.patch.RobustCallBackSample;
+import com.gitstudy.viewutils.Singleton;
 import com.meituan.robust.PatchExecutor;
 import com.meituan.robust.patch.annotaion.Add;
 import com.meituan.robust.patch.annotaion.Modify;
@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     private Button handler1Btn;
     private Button handler2Btn;
     private Button patch;
+    private Button mDownLoadApk;
     private Integer[] data = {8, 8, 9, 6, 7, 0, -1, 3};
     private List<Integer> listDataOne = new ArrayList<>();
+    private DownLoadManagerSingleton mDownLoadManagerSingleton;
 
     public Handler mHandler1 = new Handler() {
         @Override
@@ -64,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
         handler1Btn = findViewById(R.id.handler1_btn);
         handler2Btn = findViewById(R.id.handler2_btn);
         patch = findViewById(R.id.patch);
+        findViewById(R.id.downLoadApk);
+        mDownLoadApk = findViewById(R.id.downLoadApk);
+        mDownLoadApk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.i("downLoad","点击mDownLoadApk btn");
+                mDownLoadManagerSingleton = DownLoadManagerSingleton.getSingleton();
+                mDownLoadManagerSingleton.downLoadPackage(MainActivity.this);
+            }
+        });
 
         //测试一下
         click_btn.setOnClickListener(new View.OnClickListener() {
@@ -90,9 +102,11 @@ public class MainActivity extends AppCompatActivity {
         handler1Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Message mMessage = Message.obtain();
-                mMessage.what = 1;
-                mHandler1.sendEmptyMessage(mMessage.what);
+//                Message mMessage = Message.obtain();
+//                mMessage.what = 1;
+//                mHandler1.sendEmptyMessage(mMessage.what);
+                Singleton.getInstance();
+                Singleton.test();
             }
         });
         handler2Btn.setOnClickListener(new View.OnClickListener() {
@@ -121,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
     //增加方法
     @Add
     public void setBackGround() {
+        handler1Btn.setBackgroundColor(getResources().getColor(R.color.green_color));
         handler2Btn.setBackgroundColor(getResources().getColor(R.color.green_color));
         Toast.makeText(MainActivity.this, "点击handler2", Toast.LENGTH_LONG).show();
     }
@@ -184,5 +199,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void runRobust() {
         new PatchExecutor(getApplicationContext(), new PatchManipulateImp(), new RobustCallBackSample()).start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 }

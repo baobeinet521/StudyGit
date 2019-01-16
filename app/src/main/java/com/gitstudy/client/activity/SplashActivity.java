@@ -1,4 +1,4 @@
-package com.gitstudy.client;
+package com.gitstudy.client.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.gitstudy.client.activity.MainActivity;
 
 public class SplashActivity extends AppCompatActivity {
     @Override
