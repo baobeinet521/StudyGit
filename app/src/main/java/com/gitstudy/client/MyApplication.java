@@ -22,6 +22,7 @@ public class MyApplication extends Application{
     }
 
     public void initUMeng(){
+
         String appkey = "your appkey";
         String channelId = WalleChannelReader.getChannel(this.getApplicationContext());
         //初始化友盟配置信息 通过代码方式配置友盟的渠道信息
